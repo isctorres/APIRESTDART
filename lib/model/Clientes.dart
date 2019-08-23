@@ -1,7 +1,8 @@
 import 'package:firstapi/firstapi.dart';
 import 'package:firstapi/model/AreasCliente.dart';
-import 'package:firstapi/model/DetallePedido.dart';
 import 'package:firstapi/model/Pedidos.dart';
+
+
 
 class Clientes extends ManagedObject<tblClientes> implements tblClientes{}
 class tblClientes{
