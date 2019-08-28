@@ -1,6 +1,7 @@
 
 import 'package:firstapi/firstapi.dart';
 import 'package:firstapi/model/DetallePedido.dart';
+import 'package:firstapi/model/ProductoAreasCliente.dart';
 
 class Productos extends ManagedObject<tblProductos> implements tblProductos{}
 class tblProductos{
@@ -10,6 +11,8 @@ class tblProductos{
   @Column(unique: true)
   String nomProducto;
 
+  double costo;
+  double precio;
   int existencia;
   int reorden;
   int comprometidas;
@@ -17,4 +20,5 @@ class tblProductos{
   String imagen;
 
   ManagedSet<DetallePedido> detalle;
+  ManagedSet<ProductoAreasCliente> prodareacte;
 }

@@ -1,4 +1,5 @@
 import 'package:firstapi/firstapi.dart';
+import 'package:firstapi/model/Clientes.dart';
 import 'package:firstapi/model/Pedidos.dart';
 
 class PedidosController extends ResourceController{
@@ -8,7 +9,7 @@ class PedidosController extends ResourceController{
   
   @Operation.get()
   Future<Response> getAllPedidos() async {
-    final pedidosQuery = Query<Pedidos>(context);
+    final pedidosQuery = Query<Clientes>(context)..join(set: (c) => c.pedido );
     final pedidos = await pedidosQuery.fetch();
     return Response.ok(pedidos);
   }

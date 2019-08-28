@@ -7,15 +7,13 @@ class tblDetallePedido{
   @primaryKey
   int idDetalle;
 
-  @Column(indexed: true)
-  DateTime fechaPedido;
-  
-  @Column(indexed: true)
-  DateTime fechaEnvio;
-  
   @Relate(#detalle)
   Productos producto;
 
   @Relate(#detalle)
   Pedidos pedido;
+
+  double precio;
+  double descuento;
+  double cantidad;
 }

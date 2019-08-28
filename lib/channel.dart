@@ -4,7 +4,7 @@ import 'controller/ClientesController.dart';
 import 'controller/PedidosController.dart';
 import 'controller/ProductosController.dart';
 import 'controller/AreasClienteController.dart';
-//import 'controller/DetallePedidoController.dart';
+import 'controller/DetallePedidoController.dart';
 
 /// This type initializes an application.
 ///
@@ -46,6 +46,7 @@ class FirstapiChannel extends ApplicationChannel {
     router.route("/pedidos[/:idpedido]")..link( () => PedidosController(context) ); 
     router.route("/clientes[/:idcliente]").link( () => ClientesController(context) ); 
     router.route("/areas[/:idarea]").link( () => AreasController(context) );
+    router.route("/detallepedido[/:iddetped]").link( () => DetallePedidoController(context) );
 
     return router;
   }

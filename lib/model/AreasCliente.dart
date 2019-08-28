@@ -1,9 +1,7 @@
 import 'package:firstapi/firstapi.dart';
 import 'package:firstapi/model/Areas.dart';
 import 'package:firstapi/model/Clientes.dart';
-
-
-
+import 'package:firstapi/model/ProductoAreasCliente.dart';
 
 class AreasCliente extends ManagedObject<tblAreasCliente> implements tblAreasCliente{}
 class tblAreasCliente{
@@ -16,4 +14,6 @@ class tblAreasCliente{
 
   @Relate(#areacte)
   Clientes cliente;
+
+  ManagedSet<ProductoAreasCliente> prodareacte;
 }
