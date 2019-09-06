@@ -1,6 +1,7 @@
 import 'package:firstapi/firstapi.dart';
 import 'package:firstapi/model/Clientes.dart';
 import 'package:firstapi/model/DetallePedido.dart';
+import 'package:firstapi/model/Empleados.dart';
 
 class Pedidos extends ManagedObject<tblPedidos> implements tblPedidos{}
 class tblPedidos{
@@ -15,6 +16,9 @@ class tblPedidos{
   
   @Relate(#pedido)
   Clientes idCliente;
+
+  @Relate(#empleado)
+  Empleados empleado;
 
   ManagedSet<DetallePedido> detalle;
 }
